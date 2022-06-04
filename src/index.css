@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.buttonLink {
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 35%;
+    background-color: rgb(29, 28, 28);
+    color: rgb(202, 208, 208);
+    border-radius: 30px;
+    transition: all .3s ease
+}
+
+.buttonLink:hover {
+    background-color: rgb(67, 65, 65);
+}
+
+.linkStyle {
+    text-decoration: none;
+    color: inherit;
+}
+
+.linkStyle:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.introduceSection {
+    background-image: url('../imgs/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+}
+
+.logo h2 {
+    color: white;
+}
+
+.nav-item {
+    padding: 0 10px;
+    text-decoration: none;
+    transition: all ease 0.5s;
+    height: inherit;
+    height: 100px;
+}
+
+.nav-item:hover {
+    background-color: rgb(183, 177, 177);
+}
+
+.linksnavbarMenu {
+    display: flex;
+    text-decoration: none;
+    height: inherit;
+    font-size: 19px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 500;
+    margin: 0 5px;
+}
+
+.linksnavbarMenu:hover {
+    color: black;
+}
+
+.widget {
+    height: 50vh;
+}
+
+.midSectionDescription h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.categories-item-boots {
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('../imgs/boots01.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+
+.categories-item-shirts {
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('../imgs/shirts01.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+
+.categories-item-pants {
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('../imgs/pants01.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+
+.categories-item-jackets {
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('../imgs/jaquetas01.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+
+.categories-item-shorts {
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('../imgs/shorts01.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+
+.categories-item-accessories {
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('../imgs/accessories01.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+
+
+/* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 700px) {
+    .linksnavbarMenu {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+}
