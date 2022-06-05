@@ -141,6 +141,37 @@ code {
     min-height: 500px;
 }
 
+.footerMainPage {
+    background-color: #191919;
+    color: #FFFFDA;
+}
+
+.logoInsta {
+    width: 40px;
+    height: 40px;
+}
+
+.instacard {
+    width: auto;
+    height: 256px;
+    display: flex;
+    transition: all ease .4s;
+}
+
+.instacard:hover {
+    opacity: .8;
+}
+
+.instacardimage {
+    width: 100%;
+    height: 256px;
+}
+
+.colinsta {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
 
 /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
 
