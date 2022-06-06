@@ -11,6 +11,7 @@ import { InstaCard } from '../components/InstaCard';
 export function Home() {
 
   const [posts, setPosts] = useState<PostType[]>([]);
+  const [countPosts, setCountPosts] = useState(12);
 
   useEffect(() => { getPosts() }, [])
 
@@ -23,6 +24,9 @@ export function Home() {
     }
   }
 
+  const showMoreItens = async () => {
+    setCountPosts((prevValue) => prevValue + 4)
+  }
 
 
   return (
@@ -115,12 +119,25 @@ export function Home() {
           </div>
           <div className="row g-0">
             {posts &&
-              posts.map((item) => (
-                <div className="p-1 col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
-                  <InstaCard data={item} />
-                </div>
-              ))
+              posts.slice(0, countPosts).map((item, index) => {
+
+                if (index > countPosts) {
+                  setCountPosts(countPosts + 3);
+                  return;
+                }
+
+                if (index <= countPosts) {
+                  return (
+                    <div className="p-1 col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                      <InstaCard data={item} />
+                    </div>
+                  )
+                }
+              })
             }
+          </div>
+          <div className="row d-flex justify-content-center align-items-center">
+            <button onClick={showMoreItens}>Ver mais</button>
           </div>
         </div>
       </section>
