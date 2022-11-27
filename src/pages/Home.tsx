@@ -21,6 +21,7 @@ export function Home() {
     const data = await instaAPI.getPosts();
     if (data !== null) {
       setPosts(data.data);
+      console.log(posts);
     }
   }
 
@@ -40,8 +41,8 @@ export function Home() {
               Travessuras Kids
             </h1>
             <h4 className='pb-3'>Moda infanto juvenil</h4>
-            <div className="buttonLink">
-              <Link className='linkStyle' to="#">Produtos</Link>
+            <div className="buttonLinkProdutos">
+              <Link className='linkStyle' to="#">Saiba mais</Link>
             </div>
           </div>
         </div>
@@ -57,7 +58,7 @@ export function Home() {
         <div className="categories">
           <div className="row d-flex justify-center">
             <div className="col-12 p-2 col-md-4 col-sm-6">
-              <div className="card categories-item-boots d-flex flex-column align-items-center justify-content-center">
+              <div className="categories-item-boots d-flex flex-column align-items-center justify-content-center">
                 <h4 className='text-white'>Sapatos e calçados</h4>
                 <div className="buttonLink">
                   <Link className='linkStyle' to="#">Entrar</Link>
@@ -65,7 +66,7 @@ export function Home() {
               </div>
             </div>
             <div className="col-12 p-2 col-md-4 col-sm-6">
-              <div className="card categories-item-pants d-flex flex-column align-items-center justify-content-center">
+              <div className="categories-item-pants d-flex flex-column align-items-center justify-content-center">
                 <h4 className='text-white'>Calças e shorts</h4>
                 <div className="buttonLink">
                   <Link className='linkStyle' to="#">Entrar</Link>
@@ -73,7 +74,7 @@ export function Home() {
               </div>
             </div>
             <div className="col-12 p-2 col-md-4 col-sm-6">
-              <div className="card categories-item-shirts d-flex flex-column align-items-center justify-content-center">
+              <div className="categories-item-shirts d-flex flex-column align-items-center justify-content-center">
                 <h4 className='text-white'>Camisas e camisetas</h4>
                 <div className="buttonLink">
                   <Link className='linkStyle' to="#">Entrar</Link>
@@ -81,7 +82,7 @@ export function Home() {
               </div>
             </div>
             <div className="col-12 p-2 col-md-4 col-sm-6">
-              <div className="card categories-item-jackets d-flex flex-column align-items-center justify-content-center">
+              <div className="categories-item-jackets d-flex flex-column align-items-center justify-content-center">
                 <h4 className='text-white'>Jaquetas e moletons</h4>
                 <div className="buttonLink">
                   <Link className='linkStyle' to="#">Entrar</Link>
@@ -89,7 +90,7 @@ export function Home() {
               </div>
             </div>
             <div className="col-12 p-2 col-md-4 col-sm-6 ">
-              <div className="card categories-item-shorts d-flex flex-column align-items-center justify-content-center ">
+              <div className="categories-item-shorts d-flex flex-column align-items-center justify-content-center ">
                 <h4 className='text-white'>Conjuntos</h4>
                 <div className="buttonLink">
                   <Link className='linkStyle' to="#">Entrar</Link>
@@ -97,7 +98,7 @@ export function Home() {
               </div>
             </div>
             <div className="col-12 p-2 col-md-4 col-sm-6">
-              <div className="card categories-item-accessories d-flex flex-column align-items-center justify-content-center ">
+              <div className="categories-item-accessories d-flex flex-column align-items-center justify-content-center ">
                 <h4 className='text-white'>Acessórios</h4>
                 <div className="buttonLink">
                   <Link className='linkStyle' to="#">Entrar</Link>
@@ -137,7 +138,9 @@ export function Home() {
             }
           </div>
           <div className="row d-flex justify-content-center align-items-center">
-            <button onClick={showMoreItens}>Ver mais</button>
+            <div className="buttonLink">
+            <Link className='linkStyle' onClick={showMoreItens} to="#">Ver mais</Link>
+            </div>
           </div>
         </div>
       </section>

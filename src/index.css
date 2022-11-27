@@ -9,6 +9,10 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+.bb {
+    border: 2px solid green;
+}
+
 .buttonLink {
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
@@ -24,6 +28,24 @@ code {
 }
 
 .buttonLink:hover {
+    background-color: rgb(67, 65, 65);
+}
+
+.buttonLinkProdutos {
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 75%;
+    background-color: rgb(29, 28, 28);
+    color: rgb(202, 208, 208);
+    border-radius: 30px;
+    transition: all .3s ease
+}
+
+.buttonLinkProdutos:hover {
     background-color: rgb(67, 65, 65);
 }
 
@@ -46,16 +68,28 @@ code {
     height: 100vh;
 }
 
+.introduceSectionContact {
+    background-image: url('../imgs/contact3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+}
+
 .logo h2 {
     color: white;
+}
+
+.navAttributes {
+    background-color: #191919;
 }
 
 .nav-item {
     padding: 0 10px;
     text-decoration: none;
     transition: all ease 0.5s;
-    height: inherit;
-    height: 100px;
+    height: 50px;
 }
 
 .nav-item:hover {
@@ -82,6 +116,10 @@ code {
     height: 50vh;
 }
 
+.widget-content {
+    padding-left: 80px;
+}
+
 .midSectionDescription h2 {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -91,6 +129,7 @@ code {
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.5);
     background-image: url('../imgs/boots01.png');
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 500px;
@@ -100,6 +139,7 @@ code {
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.5);
     background-image: url('../imgs/shirts01.png');
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 500px;
@@ -109,6 +149,7 @@ code {
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.5);
     background-image: url('../imgs/pants01.png');
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 500px;
@@ -118,6 +159,7 @@ code {
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.5);
     background-image: url('../imgs/jaquetas01.png');
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 500px;
@@ -127,6 +169,7 @@ code {
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.5);
     background-image: url('../imgs/shorts01.png');
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 500px;
@@ -136,6 +179,7 @@ code {
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.5);
     background-image: url('../imgs/accessories01.png');
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 500px;
@@ -167,18 +211,87 @@ code {
     height: 256px;
 }
 
+.instacardvideo {
+    width: 100%;
+    height: 256px;
+}
+
 .colinsta {
     padding-left: 2px;
     padding-right: 2px;
 }
 
 
+/* ABOUT section */
+
+.aboutSection {
+    height: calc(100vh - 100px);
+}
+
+.about-div-image-left img {
+    width: 75%;
+}
+
+.about-div-image-right img {
+    width: 75%;
+}
+
+
+/* ContactPage */
+
+.containerForm {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.containerForm input[type=text],
+.containerForm select,
+.containerForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.containerForm input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.containerForm input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.contact-left-side {
+    color: white;
+    font-size: 17px;
+}
+
+
 /* On screens that are 700px wide or less, make the columns stack on top of each other instead of next to each other */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     .linksnavbarMenu {
         display: flex;
         justify-content: left;
         align-items: center;
+    }
+    .about-div-image-right img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .widget-content {
+        padding-left: 10px;
     }
 }

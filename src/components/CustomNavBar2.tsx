@@ -3,9 +3,9 @@ import logoIMG from "../../imgs/logo22.png";
 import '../index.css';
 
 
-export const CustomNavBar = () => {
+export const CustomNavBar2 = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light">
+        <nav className="navbar navbar-expand-lg navbar-light navAttributes">
             <div className="container-fluid d-flex">
                 <div className="logo">
                     <NavLink className="navbar-brand linksnavbarMenu" to="/">
