@@ -39,7 +39,7 @@ code {
     justify-content: center;
     height: 50px;
     width: 75%;
-    background-color: rgb(29, 28, 28);
+    background-color: #1d1c1c;
     color: rgb(202, 208, 208);
     border-radius: 30px;
     transition: all .3s ease
@@ -93,7 +93,7 @@ code {
 }
 
 .nav-item:hover {
-    background-color: rgb(183, 177, 177);
+    background-color: #b7b1b1;
 }
 
 .linksnavbarMenu {
@@ -241,7 +241,7 @@ code {
 
 .containerForm {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: rgba(242, 242, 242, .5);
     padding: 20px;
 }
 
@@ -255,11 +255,11 @@ code {
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
-    resize: vertical;
+    resize: none
 }
 
 .containerForm input[type=submit] {
-    background-color: #04AA6D;
+    background-color: #1d1c1c;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -268,7 +268,8 @@ code {
 }
 
 .containerForm input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #b7b1b1;
+    color: #191919;
 }
 
 .contact-left-side {
@@ -293,5 +294,16 @@ code {
 @media screen and (max-width: 576px) {
     .widget-content {
         padding-left: 10px;
+    }
+    .containerForm {
+        margin-top: 20px;
+    }
+    .contact-left-side {
+        margin-top: 20px;
+    }
+    .introduceSectionContact {
+        background-repeat: repeat;
+        height: 200vh;
+        background-position: center;
     }
 }

@@ -9,7 +9,7 @@ export const CustomNavBar = () => {
             <div className="container-fluid d-flex">
                 <div className="logo">
                     <NavLink className="navbar-brand linksnavbarMenu" to="/">
-                       <h2>Travessuras Kids</h2>
+                       <h2 className="mx-1">Travessuras Kids</h2>
                     </NavLink>
                 </div>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,7 @@ export const CustomNavBar = () => {
                             <NavLink className="linksnavbarMenu" to="/about">Sobre</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="linksnavbarMenu" to="/produtos">Produtos</NavLink>
+                            <NavLink className="linksnavbarMenu" to="/products">Produtos</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="linksnavbarMenu" to="/contact">Contato</NavLink>

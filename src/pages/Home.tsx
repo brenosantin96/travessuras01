@@ -137,7 +137,7 @@ export function Home() {
               })
             }
           </div>
-          <div className="row d-flex justify-content-center align-items-center">
+          <div className="row d-flex justify-content-center align-items-center mb-5">
             <div className="buttonLink">
             <Link className='linkStyle' onClick={showMoreItens} to="#">Ver mais</Link>
             </div>

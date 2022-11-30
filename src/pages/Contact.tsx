@@ -28,9 +28,12 @@ export function Contact() {
                   <p className='lh-base'>
                     Fique a vontade para preencher nosso formulário.
                   </p>
-                  <p className='lh-base'>Se preferir pode nos ligar em <span>{"(34) 3825-4559"}</span>.</p>
+                  <p className='lh-base'>Se preferir pode nos ligar em <strong>{"(34) 3825-4559"}</strong>.</p>
                   <p className='lh-base'>
-                    Rua João da Silva, 122 - 38700-122 Patos de Minas MG
+                    Rua João da Silva, 122 - 38700-122 
+                  </p>
+                  <p className='lh-base'>
+                    Patos de Minas - MG
                   </p>
                 </div>
               </div>
