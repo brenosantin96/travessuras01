@@ -1,21 +1,57 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { useSearchParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { CustomNavBar } from '../components/CustomNavBar'
-import { Footer } from '../components/Footer'
-import logoInsta from "../../imgs/logoInsta.png";
-import { instaAPI } from '../api/api'
+import { Footer } from '../components/Footer';
+import logoInsta from "./logoInstagram.png"
+import { instaAPI, instagramAppID, instagramGrantType, instagramRedirectURI, instagramSecretKey } from '../api/api'
 import { PostType } from '../types/PostType'
 import '../index.css';
 import { InstaCard } from '../components/InstaCard';
+import { authURL, businessURL } from '../utils/initFacebookSdk'
 
 export function Home() {
+
+
+  const [code, setCode] = useState("");
+  const [accessToken, setAccessToken] = useState("");
+
+  const [searchParams] = useSearchParams();
 
   const [posts, setPosts] = useState<PostType[]>([]);
   const [countPosts, setCountPosts] = useState(12);
 
-  useEffect(() => { getPosts() }, [])
+  //getURLPARAMETERS, if false (execute the function to redirect, if true, get the PARAMETER and store in a variable)
 
+  useEffect(()=> {
+    getURLCode();
+  }, []);
 
+  useEffect(()=> {
+    if(code !== ""){
+      getCodigoAcceso();
+    } else {
+      console.log("Bleh")
+    }
+  }, [code])
+
+  function initInstagramApi() {
+    window.location.href = authURL;
+  }
+
+  async function getCodigoAcceso() {
+    let response = await instaAPI.getAccessToken2(instagramAppID, instagramSecretKey, code, instagramGrantType, instagramRedirectURI);
+    console.log(response)
+  }
+
+  function getURLCode() {
+    let codigo = searchParams.get("code");
+    if(codigo === null){
+      initInstagramApi()
+    } else {
+      setCode(codigo);
+    }
+  }
 
   const getPosts = async () => {
     const data = await instaAPI.getPosts();
@@ -139,9 +175,20 @@ export function Home() {
           </div>
           <div className="row d-flex justify-content-center align-items-center mb-5">
             <div className="buttonLink">
-            <Link className='linkStyle' onClick={showMoreItens} to="#">Ver mais</Link>
+              <Link className='linkStyle' onClick={showMoreItens} to="#">Ver mais</Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className='FBArea'>
+
+        <div className="buttonLink">
+          <a href={authURL}>Autenticar</a>
+        </div>
+
+        <div className='container'>
+          <a target="_blank" href={businessURL}>Teste</a>
         </div>
       </section>
 
