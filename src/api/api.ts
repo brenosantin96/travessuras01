@@ -32,7 +32,7 @@ export const instaAPI = {
         return response.data;
     },
 
-    getAccessToken2: async (client_id: string, client_secret: string, code: string, grant_type: string, redirect_uri: string) => {
+    getAccessTokenWithFETCH: async (client_id: string, client_secret: string, code: string, grant_type: string, redirect_uri: string) => {
 
         const rawResponse = await fetch("https://api.instagram.com/oauth/access_token", {
             method: "POST",

@@ -40,7 +40,7 @@ export function Home() {
   }
 
   async function getCodigoAcceso() {
-    let response = await instaAPI.getAccessToken2(instagramAppID, instagramSecretKey, code, instagramGrantType, instagramRedirectURI);
+    let response = await instaAPI.getAccessTokenWithFETCH(instagramAppID, instagramSecretKey, code, instagramGrantType, instagramRedirectURI);
     console.log(response)
   }
 
